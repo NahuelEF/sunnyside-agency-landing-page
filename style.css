@@ -93,6 +93,10 @@ body {
   color: var(--neutral-white);
 }
 
+.nav__menu {
+  display: none;
+}
+
 .header__title {
   margin: 1em 0;
   color: var(--neutral-white);
@@ -113,6 +117,10 @@ body {
   height: 33em;
   display: flex;
   justify-content: center;
+}
+
+.section--flex {
+  flex-direction: row-reverse;
 }
 
 .info {
@@ -288,14 +296,20 @@ body {
 
 .images {
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
   align-items: center;
   justify-content: center;
 }
 
 .images__img {
-  width: 25%;
+  width: 100%;
   border: none;
+}
+
+.images__img--mobile {
+  display: none;
 }
 
 .footer {
@@ -307,6 +321,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  text-align: center;
 }
 
 .footer__logo {
